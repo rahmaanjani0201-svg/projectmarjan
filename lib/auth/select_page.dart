@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_marjan/auth/login_siswa.dart';
+import 'package:project_marjan/auth/login_siswa_anjani.dart';
 
 class SelectPage extends StatelessWidget {
   const SelectPage({super.key});
@@ -30,12 +30,28 @@ class SelectPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 75),
-            ElevatedButton(
-              style: ,
-                onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginSiswa(),));
-            }, child: Text("Siswa"))
+            SizedBox(height: 100),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginSiswa()),
+                );
+              },
+              child: Container(
+                width: 100,
+                padding: EdgeInsets.all(150),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadiusGeometry.circular(10)
+                ),
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/murid.png",height: 80),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
