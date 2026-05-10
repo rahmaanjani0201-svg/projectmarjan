@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_marjan/auth/login_siswa_anjani.dart';
 
-import '../pages/home_page.dart';
+import '../pages/home_page_siswa_anjani.dart';
 
 class RegisterSiswaAnjani extends StatefulWidget {
   const RegisterSiswaAnjani({super.key});
@@ -115,7 +115,7 @@ class _RegisterSiswaAnjaniState extends State<RegisterSiswaAnjani> {
                         _nama.text.isNotEmpty) {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => HomePageSiswa()),
                       );
                     } else {
                       showDialog(

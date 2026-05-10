@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_marjan/auth/register_siswa_anjani.dart';
-import 'package:project_marjan/pages/home_page.dart';
+import 'package:project_marjan/pages/home_page_siswa_anjani.dart';
 
 class LoginSiswa extends StatefulWidget {
   const LoginSiswa({super.key});
@@ -123,7 +123,7 @@ class _LoginSiswaState extends State<LoginSiswa> {
                         _password.text == "rahmaanjani") {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => HomePageSiswa()),
                       );
                     } else {
                       showDialog(
