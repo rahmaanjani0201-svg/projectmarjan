@@ -159,7 +159,8 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                     MaterialPageRoute(builder: (context) => LoginSiswa()),
                   );
                 },
-                child: Row(
+                child:
+                Row(
                   children: [
                     Icon(Icons.logout, size: 22, color: Colors.purple),
                     SizedBox(width: 10),
@@ -167,6 +168,7 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
                   ],
                 ),
               ),
+
             ],
           ),
         ),
@@ -174,55 +176,58 @@ class _HomePageSiswaState extends State<HomePageSiswa> {
       body: ListView.builder(
         itemCount: jadwal.length,
         itemBuilder: (context, index) {
-          return Container(
-            margin: EdgeInsets.only(top: 20, left: 15, right: 15),
-            padding: EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.purple.shade100,
-              borderRadius: BorderRadius.circular(5),
-              border: Border.all(color: Colors.grey),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  jadwal[index].jam,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-                SizedBox(width: 12),
-                Icon(jadwal[index].icon, size: 30, color: Colors.purple),
-                SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      jadwal[index].pelajaran,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              margin: EdgeInsets.only(top: 20, left: 15, right: 15),
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                color: Colors.purple.shade100,
+                borderRadius: BorderRadius.circular(5),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    jadwal[index].jam,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  SizedBox(width: 12),
+                  Icon(jadwal[index].icon, size: 30, color: Colors.purple),
+                  SizedBox(width: 12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        jadwal[index].pelajaran,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 3),
-                    Text(
-                      jadwal[index].guru,
-                      style: TextStyle(fontSize: 13, color: Colors.grey),
-                    ),
-                  ],
-                ),
-                SizedBox(width: 12),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.purple),
-                    color: Colors.purple.shade50,
+                      SizedBox(height: 3),
+                      Text(
+                        jadwal[index].guru,
+                        style: TextStyle(fontSize: 13, color: Colors.grey),
+                      ),
+                    ],
                   ),
-                  child: Text(
-                    jadwal[index].status,
-                    style: TextStyle(fontSize: 12),
+                  SizedBox(width: 12),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.purple),
+                      color: Colors.purple.shade50,
+                    ),
+                    child: Text(
+                      jadwal[index].status,
+                      style: TextStyle(fontSize: 12),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         },
